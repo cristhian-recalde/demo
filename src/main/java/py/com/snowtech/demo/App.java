@@ -86,7 +86,8 @@ public class App implements Serializable, Cloneable, AutoCloseable {
 
   public synchronized void getMagicNumbers(double bol, int mag) throws Exception {
 
-    ET eType;
+    Class<? extends Enum> eType = null;
+    Thread t;
 
     switch (mag) {
       case 0:
@@ -114,8 +115,7 @@ public class App implements Serializable, Cloneable, AutoCloseable {
       case 11:
         throw new ClassFormatError();
       case 12:
-        break;
-      // throw new EnumConstantNotPresentException(eType, "MERGE");
+        throw new EnumConstantNotPresentException(eType, "MERGE");
       case 13:
         throw new Error();
       case 14:
@@ -180,6 +180,8 @@ public class App implements Serializable, Cloneable, AutoCloseable {
         throw new SecurityException();
       case 44:
         throw new ReflectiveOperationException();
+      case 45:
+        throw new AbstractMethodError();
       default:
         break;
     }
@@ -218,7 +220,7 @@ public class App implements Serializable, Cloneable, AutoCloseable {
       }
       int i;
 
-      for (i = 0; i < 3; i++);
+      for (i = 0; i < 3; i++) if (i == 2) { continue; };
       i = 0;
 
       while (i++ < 4);
