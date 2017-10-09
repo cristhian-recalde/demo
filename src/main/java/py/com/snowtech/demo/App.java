@@ -13,7 +13,7 @@ import java.util.UUID;
 
 import javax.xml.namespace.QName;
 
-import com.sun.xml.internal.bind.v2.schemagen.episode.Package;
+// import com.sun.xml.internal.bind.v2.schemagen.episode.Package;
 import com.sun.xml.internal.txw2.Document;
 import com.sun.xml.internal.txw2.TypedXmlWriter;
 
@@ -25,7 +25,8 @@ public class App implements Serializable, Cloneable, AutoCloseable {
   };
 
   volatile int manage;
-  final String M = "none";
+  final String M      =     "none";
+  private int m=1;
   private transient long per;
 
   public App() {
@@ -45,7 +46,7 @@ public class App implements Serializable, Cloneable, AutoCloseable {
   public static void main(String[] args) {
     System.out.println("Hello World again!");
     // creating UUID
-    UUID uid = UUID.fromString("38400000-8cf0-11bd-b23e-10b96e4ef00d");
+    UUID uid = UUID.fromString("38400000-8cf0-11bd-b23e-10b96e4ef00d").randomUUID();
 
     // checking the value of random UUID
     System.out.println("Random UUID value: " + uid.randomUUID());
@@ -182,6 +183,8 @@ public class App implements Serializable, Cloneable, AutoCloseable {
         throw new ReflectiveOperationException();
       case 45:
         throw new AbstractMethodError();
+      case 46:
+        throw new NumberFormatException();
       default:
         break;
     }
@@ -242,7 +245,7 @@ public class App implements Serializable, Cloneable, AutoCloseable {
     ClassLoader classLoader = new ClassLoader() {};
     com.sun.org.apache.xpath.internal.compiler.Compiler comp =
         new com.sun.org.apache.xpath.internal.compiler.Compiler();
-    Package pa = new Package() {
+    /*Package pa = new Package() {
 
       @Override
       public Document getDocument() {
@@ -357,7 +360,7 @@ public class App implements Serializable, Cloneable, AutoCloseable {
         // TODO Auto-generated method stub
 
       }
-    };
+    }; */
     Process ps = new Process() {
 
       @Override
@@ -422,6 +425,7 @@ public class App implements Serializable, Cloneable, AutoCloseable {
     ThreadDeath tet = new ThreadDeath();
     ThreadGroup tGrut = new ThreadGroup("oe");
     System system;
+   
   }
 
   interface nameInterfaceTest {
