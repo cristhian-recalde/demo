@@ -1,7 +1,12 @@
 package py.com.snowtech.demo;
 
+import org.mockito.InjectMocks;
+
 public class AppTest extends BTest {
-    private FunctionParser fp = new FunctionParser();
+
+    @InjectMocks
+    private FunctionParser fp;
+
     int mock = 1;
     public AppTest(String testName) {
         super();
