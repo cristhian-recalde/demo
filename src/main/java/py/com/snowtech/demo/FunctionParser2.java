@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 import java.util.regex.Pattern;
 import py.com.snowtech.model.interfaces.VMConstants;
 
-public class FunctionParser {
+public class FunctionParser2 {
 
     private static Pattern function = Pattern.compile("\\w[A-Za-z0-9_]+\\([\\s*\\w*][,\\s*\\w\\s*]*\\)\\s*");
 
