@@ -7,15 +7,10 @@ import java.io.Serializable;
 import java.lang.annotation.Annotation;
 import java.nio.CharBuffer;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
-import javax.xml.namespace.QName;
-
 // import com.sun.xml.internal.bind.v2.schemagen.episode.Package;
-import com.sun.xml.internal.txw2.Document;
-import com.sun.xml.internal.txw2.TypedXmlWriter;
 
 
 @SuppressWarnings("serial")
